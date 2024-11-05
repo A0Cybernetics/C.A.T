@@ -1,5 +1,5 @@
 # A0 Cybernetics: C.A.T
-<img src="/Documents/READMEPics/liveControl.gif" alt="liveControl" width=25%><img src="/Documents/READMEPics/C.A.T_Sensor.gif" alt="C.A.T_Sensor" width=75%>
+<img src="/Documents/READMEPics/liveControl.gif" alt="liveControl" width=60%><img src="/Documents/READMEPics/C.A.T_Sensor.jpg" alt="C.A.T_Sensor" width=40%>
 
 An interactive adult entertainment device. It measures a targets distance from the sensor to control connected devices and interact with media.
 
