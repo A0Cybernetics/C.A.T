@@ -1,0 +1,78 @@
+---- C.A.T Build Guide ----
+	*The pictures are in the C.A.T_InstructionPictures folder.
+
+---- Parts List
+
+1. LILYGO T-QT PRO (ESP32 S3FN8 VERSION) AND SHELL - Buy the shell to help protect the board, the pin and soldering options are your choice.
+	https://www.lilygo.cc/products/t-qt-pro?variant=42568397324469
+
+2. VL53L1X SENSOR BREAKOUT BOARD WITH COVER GLASS. One that looks like this picture (pic VL53L1X).  You can find them on Amazon, AliExpress, etc. for around $5.
+
+3. Grove or QWIIC Cable - I recommend a long Grove Cable.  I have tested cabled up to 2 meters. 
+	- The T-QT has a QWIIC Connector so you will need a Grove to QWIIC hub or another type of connector.  I plan to port this project to a board with a Grove port in the future.
+	https://shop.m5stack.com/products/4pin-buckled-grove-cable?variant=32050977833050
+
+4. 3D PRINTED C.A.T FACEPLAE - The C.A.T Backplate is optional and only recommended to improve the appearance of an unsealed hot glue build.
+
+5. Electronic Grade RTV Silicone like ASI 388, or hot glue.  Use small dabs of hot glue to secure everything together if you want to be able to disassemble the C.A.T.  For a better device use silicone to seal the seam between the cover glass and case and to completely encapsulate the circuit board in the back.
+	The C.A.T can be made extremely water resistant if you employ proper fabrication techniques.
+
+---- C.A.T Assembly
+
+1. Cut the screw hole sections off of the sides of the sensor breakout board. (pic assembly1)
+
+2. Clean the sensor board and the inside of the cover glass.
+
+3. Install the cover glass over the sensor.
+
+4. Trim any edges of the cover glass that extend over the edge of the sensor board.  Make the whole board assembly rectangular. (pic assembly2)
+
+5. Clean the sensor board assembly to prepare it for soldering.
+
+6. Cut off one end of a QWIIC or Grove cable and solder the wires to the sensor board with the wire extending from the side opposite the cover glass.
+	- Grove - Black to GND, Red to Volt, Yellow to SDA, White to SCL
+	- QWIIC - Black to GND, Red to Volt, Blue to SDA, Yellow to SCL
+	
+7. With flush cutters, snip off the extra wire and solder sticking out of the board to make it flatter so that it can fit into the case. (pic assembly3)
+	*optional - Add rings of heat shrink tubing to prevent the cable from splitting.
+
+8. Clean the board and install it into the C.A.T Faceplate.
+
+9. Use Silicone sealant or hot glue to fuse the sensor and faceplate. (pic assembly4)
+
+---- Flashing Firmware
+
+	1. Download Flash Download Tools from ESPRESSIF @ 	https://www.espressif.com/en/support/download/other-tools
+	2. Run program
+	3. Select ChipType: ESP32-S3; WorkMode: Develop; LoadMode: UART; OK (pic firmware1)
+	4. Select firmware @ 0x0 (pic firmware2)
+	5. Connect board to computer, select COM port for the board
+	6. Press Start
+	7. When download panel shows FINISH (pic firmware3), press reset on the board to 	verify download, disconnect board and close program
+
+---- USING THE C.A.T MOUSE MODE ON WINDOWS
+
+1.  Search for Mouse Settings in the start menu search bar.
+
+2.  In the Mouse settings.  Go near the bottom of the Mouse Settings and click on Additional Mouse Settings.  This will open the Mouse Properties window.
+
+3.  Click on the Pointer Options tab an uncheck the Enhance Pointer Precision box. (pic mouseProperties)
+	- This will make the mouse properly when using the C.A.T.  This makes the mouse return to the same starting point.  If you don't to this
+	the mouse will drift.
+
+4.  The C.A.T acts like a computer mouse that moves when a target moves closer or farther from the sensor.
+	Point the sensor at a target.  When the target moves within the sensing range the mouse will move on the screen.
+
+5.  With your normal mouse, move the mouse cursor to the spot that you want to grab with the TQT.
+
+6.  Toggle the Mouse : Released / grabbed option to grab a UI slider.
+
+7.  To change the direction the mouse moves toggle the Invert Output option.
+
+8.  To change the axis the mouse moves in toggle the Mouse Axis option.
+
+*.  If you want to use your regular mouse just start using your regular mouse again.
+
+*.  If you have any problems try: Press the T-QT reset button to reset the controller.
+	Verify that all cables are connected securely.
+	Disconnect and reconnect the USB cable to the computer.
